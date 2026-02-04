@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+<h2>Applications Received</h2>
+<div id="data"></div>
+
+</div>
+
+<script>
+fetch('/admin-data')
+.then(res => {
+ if(res.status === 401) {
+   window.location = "/login.html";
+ }
+ return res.json();
+})
+.then(data => {
+ document.getElementById("data").innerHTML =
+ data.map(a => `<p>${a.student_name} - ${a.school}</p>`).join("");
+});
+</script>
+
+</body>
+</html>
+
+

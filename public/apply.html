@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apply</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+<h2>Admission Application</h2>
+
+<form action="/apply" method="POST" enctype="multipart/form-data">
+
+<input name="student_name" placeholder="Student Name" required>
+
+<input name="parent_name" placeholder="Parent Name" required>
+
+<select name="school" required>
+<option value="">Select School</option>
+<option>Green Valley Public School</option>
+<option>Sunrise International School</option>
+<option>St Mary’s Academy</option>
+<option>Delhi Public School</option>
+</select>
+
+<input type="file" name="document" required>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</div>
+</body>
+</html>
+
