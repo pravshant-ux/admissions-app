@@ -1,6 +1,12 @@
 const express = require("express");
 const sqlite3 = require("sqlite3").verbose();
 const multer = require("multer");
+const fs = require("fs");
+
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
+
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
